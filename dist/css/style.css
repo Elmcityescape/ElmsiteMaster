@@ -253,7 +253,13 @@ section {
 
 /* =Navigation
 -------- */
-
+.navigation .menu-bar{
+  color: black;
+  background-color: #222;
+  overflow: hidden;
+  line-height: 1em;
+  max-width: 
+}
 .navigation .menu-icon {
   color: white;
   font-size: 30px;
@@ -291,21 +297,21 @@ section {
   top: 0; left: 0; bottom: 0;
   height: 100%;
   z-index: 3;
-  width: 320px;
+  width: 200px;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
 
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 
 }
-
+/*expanded list background*/
 .navigation ul {
   list-style: none;
   position: absolute;
@@ -332,7 +338,7 @@ section {
   color: white;
   font-weight: 900;
 }
-
+/*expanded list colors*/
 .navigation ul li a.current,
 .navigation ul li a:hover {
   color: #222;
@@ -349,7 +355,7 @@ section {
   min-height: 500px;
   text-align: center;
   position: relative;
-  background-color: #d56d4d; /* layer fill content */
+  background-color: #6de567; /* layer fill content */
   color: white;
 }
 .hero-image {
@@ -362,12 +368,12 @@ section {
 }
 .hero-image:after {
   content: '';
-  opacity: .87; /* layer alpha */
+  opacity: .77; /* layer alpha */
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSIxMDAlIiB5MT0iNTAlIiB4Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIiB5Mj0iNTAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JiNDI0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VmYWI0YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
-  background-image: -moz-linear-gradient(right, #bb4242 0%, #efab4a 100%); /* gradient overlay */
-  background-image: -o-linear-gradient(right, #bb4242 0%, #efab4a 100%); /* gradient overlay */
-  background-image: -webkit-linear-gradient(right, #bb4242 0%, #efab4a 100%); /* gradient overlay */
-  background-image: linear-gradient(right, #bb4242 0%, #efab4a 100%); /* gradient overlay */
+  background-image: -moz-linear-gradient(right, #bb4242 0%, #26e600 100%); /* gradient overlay */
+  background-image: -o-linear-gradient(right, #bb4242 0%, #26e600 100%); /* gradient overlay */
+  background-image: -webkit-linear-gradient(right, #bb4242 0%, #26e600 100%); /* gradient overlay */
+  background-image: linear-gradient(right, #bb4242 0%, #26e600 100%); /* gradient overlay */
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
 }
@@ -395,7 +401,7 @@ section {
   font-size: 2rem;
 }
 .contact-us-details .social-links a {
-  color: #222;
+  color: #26e600;
   display: block;
 }
 

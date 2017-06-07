@@ -557,6 +557,9 @@
 .fa-twitter-square:before {
   content: "\f081";
 }
+.fa-tripadvisor:before {
+  content: "\f262";
+}
 .fa-facebook-square:before {
   content: "\f082";
 }
@@ -760,11 +763,20 @@
 .fa-pinterest-square:before {
   content: "\f0d3";
 }
+.fa-google-plus:before {
+  content: "\f0d5";
+}
 .fa-google-plus-square:before {
   content: "\f0d4";
 }
-.fa-google-plus:before {
-  content: "\f0d5";
+.fa-yelp:before {
+  content: "\f1e9";
+}
+.fa-snapchat:before {
+  content: "\f2ac";
+}
+.fa-instagram:before {
+  content: "\f16d";
 }
 .fa-money:before {
   content: "\f0d6";
