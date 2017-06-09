@@ -253,7 +253,38 @@ section {
 
 /* =Navigation
 -------- */
-.navigation .menu-bar{
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 5;
+    position: fixed;
+    width: 100%; 
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+/*.navigation .menu-bar{
   color: black;
   background-color: #222;
   overflow: hidden;
@@ -312,6 +343,7 @@ section {
 
 }
 /*expanded list background*/
+/*
 .navigation ul {
   list-style: none;
   position: absolute;
@@ -338,14 +370,16 @@ section {
   color: white;
   font-weight: 900;
 }
+
 /*expanded list colors*/
+/*
 .navigation ul li a.current,
 .navigation ul li a:hover {
   color: #222;
   background-color: white;
 }
 
-
+*/
 /* =Hero
 -------- */
 
