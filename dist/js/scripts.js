@@ -60,41 +60,41 @@ $(document).ready(function(){
     $navigation.toggleClass('active');
   });
 
-  $mainNavigation.singlePageNav({
-      filter: ':not(.external)',
-      speed: 1000,
-      currentClass: 'current',
-      easing: 'swing',
-      updateHash: false,
-      beforeStart: function() {
-      },
-      onComplete: function() {
-        $navigation.removeClass('active');
-      }
-  });
+//   $mainNavigation.singlePageNav({
+//       filter: ':not(.external)',
+//       speed: 1000,
+//       currentClass: 'current',
+//       easing: 'swing',
+//       updateHash: false,
+//       beforeStart: function() {
+//       },
+//       onComplete: function() {
+//         $navigation.removeClass('active');
+//       }
+//   });
 
-  // Scrollreveal initialize
+//   // Scrollreveal initialize
 
-  var config = {
+//   var config = {
 
-    easing: 'hustle',
-    reset:  false,
-    delay:  'onload',
-    opacity: .2,
-    vFactor: 0.2,
-    mobile: false
-  }
+//     easing: 'hustle',
+//     reset:  false,
+//     delay:  'onload',
+//     opacity: .2,
+//     vFactor: 0.2,
+//     mobile: false
+//   }
 
-  window.sr = new scrollReveal( config );
+//   window.sr = new scrollReveal( config );
 
-  // Fancybox
+//   // Fancybox
 
-  $(".video-play").fancybox({
-    fitToView : true,
-    width   : '100%',
-    autoSize  : true,
-    closeClick  : false,
-    openEffect  : 'none',
-    closeEffect : 'none'
-  });
+//   $(".video-play").fancybox({
+//     fitToView : true,
+//     width   : '100%',
+//     autoSize  : true,
+//     closeClick  : false,
+//     openEffect  : 'none',
+//     closeEffect : 'none'
+//   });
 });
