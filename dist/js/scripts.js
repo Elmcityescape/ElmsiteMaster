@@ -60,18 +60,6 @@ $(document).ready(function(){
     $navigation.toggleClass('active');
   });
 
-  $mainNavigation.singlePageNav({
-      filter: ':not(.external)',
-      speed: 1000,
-      currentClass: 'current',
-      easing: 'swing',
-      updateHash: false,
-      beforeStart: function() {
-      },
-      onComplete: function() {
-        $navigation.removeClass('active');
-      }
-  });
 
   // Scrollreveal initialize
 
@@ -85,16 +73,5 @@ $(document).ready(function(){
     mobile: false
   }
 
-  window.sr = new scrollReveal( config );
 
-  // Fancybox
-
-  $(".video-play").fancybox({
-    fitToView : true,
-    width   : '100%',
-    autoSize  : true,
-    closeClick  : false,
-    openEffect  : 'none',
-    closeEffect : 'none'
-  });
 });

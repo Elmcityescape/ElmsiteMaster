@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -31,20 +33,24 @@
 
   <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="js/jquery.2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="js/scrollreveal.js"></script>
-  <script type="text/javascript" src="js/singlenav.js"></script>
+ <!--  <script type="text/javascript" src="js/scrollreveal.js"></script> -->
+<!--   <script type="text/javascript" src="js/singlenav.js"></script> -->
   <script type="text/javascript" src="js/jquery.fancybox.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-
+  <script type="text/javascript" src="js/jquery.smooth-scroll.js"></script>
+  <script type="text/javascript" src="js/slidebars.min.js"></script>
 </head>
 <body>
- <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+       <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+       <script
+            src="http://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+       <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.js"><\/script>')</script>
+       <script src="js/plugins.js"></script>
+       <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
@@ -52,9 +58,33 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-<!-- Menu -->
+       <!-- Initialize Slidebars-->
+        <script>
+      ( function ( $ ) {
+        // Initialize Slidebars
+        var controller = new slidebars();
+        controller.init();
+            // Toggle Slidebars
+        $( '.toggle-id-1' ).on( 'click', function ( event ) {
+          // Stop default action and bubbling
+          event.stopPropagation();
+          event.preventDefault();
 
-<nav class="topnav">
+          // Toggle the Slidebar with id 'id-1'
+          controller.toggle( 'id-1' );
+        } );
+
+      } ) ( jQuery );
+        </script>
+<!-- Menu -->
+ <div canvas="container">
+    </div>
+    <div off-canvas="id-1 left reveal">
+    <a href="#" class="menu-icon">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!-- <nav class="topnav">
 
   <ul class="topnav">
  
@@ -73,7 +103,7 @@
     <li><a href="#quote">Quote</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-</nav>
+</nav> -->
 
 <!-- Hero -->
 
@@ -294,7 +324,7 @@
 
 <section data-sr id="video" class="video u-full-width featured-bg-image">
   <h4 class="centered">
-    <a href="http://www.youtube.com/embed/EVpyXNiHVbE?autoplay=1" class="button inverted circle fancybox.iframe video-play">
+    <a data-fancybox href="https://youtu.be/GfCL1VJ4WbQ" class="button inverted circle"> 
       <i class="fa fa-play"></i>
     </a>
   </h4>
