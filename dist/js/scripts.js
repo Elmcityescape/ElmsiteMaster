@@ -13,7 +13,62 @@ $(document).ready(function(){
   $(window).resize(function() {
     $heroContainer.height(window.innerHeight);
   });
+/**
+ * FastClick
+ */
 
+if ( 'addEventListener' in document ) {
+    document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach( document.body );
+    }, false );
+}
+// sLIDEBARS FUNCTIONS
+( function ( $ ) {
+        // Initialize Slidebars
+        var controller = new slidebars();
+        controller.init();
+            // Toggle Slidebars
+        $( '.toggle-id-1' ).on( 'click', function ( event ) {
+          // Stop default action and bubbling
+          event.stopPropagation();
+          event.preventDefault();
+
+          // Toggle the Slidebar with id 'id-1'
+          controller.toggle( 'id-1' );
+        } );
+            // Close any
+    $( document ).on( 'click', '.js-close-any', function ( event ) {
+      if ( controller.getActiveSlidebar() ) {
+        event.preventDefault();
+        event.stopPropagation();
+        controller.close();
+      }
+    } );
+
+    // Close Slidebar links
+    $( '[off-canvas] a' ).on( 'click', function ( event ) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var url = $( this ).attr( 'href' ),
+      target = $( this ).attr( 'target' ) ? $( this ).attr( 'target' ) : '_self';
+
+      controller.close( function () {
+        window.open( url, target );
+      } );
+    } );
+
+    // Add close class to canvas container when Slidebar is opened
+    $( controller.events ).on( 'opening', function ( event ) {
+      $( '[canvas]' ).addClass( 'js-close-any' );
+    } );
+
+    // Add close class to canvas container when Slidebar is opened
+    $( controller.events ).on( 'closing', function ( event ) {
+      $( '[canvas]' ).removeClass( 'js-close-any' );
+    } );
+
+      } ) ( jQuery );
   // =Work
   // Isotope filters
 
@@ -60,7 +115,6 @@ $(document).ready(function(){
     $navigation.toggleClass('active');
   });
 
-<<<<<<< HEAD
 
   // Scrollreveal initialize
 
@@ -75,43 +129,4 @@ $(document).ready(function(){
   }
 
 
-=======
-//   $mainNavigation.singlePageNav({
-//       filter: ':not(.external)',
-//       speed: 1000,
-//       currentClass: 'current',
-//       easing: 'swing',
-//       updateHash: false,
-//       beforeStart: function() {
-//       },
-//       onComplete: function() {
-//         $navigation.removeClass('active');
-//       }
-//   });
-
-//   // Scrollreveal initialize
-
-//   var config = {
-
-//     easing: 'hustle',
-//     reset:  false,
-//     delay:  'onload',
-//     opacity: .2,
-//     vFactor: 0.2,
-//     mobile: false
-//   }
-
-//   window.sr = new scrollReveal( config );
-
-//   // Fancybox
-
-//   $(".video-play").fancybox({
-//     fitToView : true,
-//     width   : '100%',
-//     autoSize  : true,
-//     closeClick  : false,
-//     openEffect  : 'none',
-//     closeEffect : 'none'
-//   });
->>>>>>> master
 });

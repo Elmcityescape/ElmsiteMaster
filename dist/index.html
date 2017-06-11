@@ -24,12 +24,8 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
-<<<<<<< HEAD
   <link rel="stylesheet" href="css/style.css">
 
-=======
-  <link href="css/slidebars.min.css" type="text/css" rel="stylesheet" />
->>>>>>> master
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,17 +33,12 @@
 
   <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<<<<<<< HEAD
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-=======
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
->>>>>>> master
   <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
  <!--  <script type="text/javascript" src="js/scrollreveal.js"></script> -->
 <!--   <script type="text/javascript" src="js/singlenav.js"></script> -->
   <script type="text/javascript" src="js/jquery.fancybox.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-<<<<<<< HEAD
   <script type="text/javascript" src="js/jquery.smooth-scroll.js"></script>
   <script type="text/javascript" src="js/slidebars.min.js"></script>
 </head>
@@ -67,133 +58,37 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-       <!-- Initialize Slidebars-->
-        <script>
-      ( function ( $ ) {
-        // Initialize Slidebars
-        var controller = new slidebars();
-        controller.init();
-            // Toggle Slidebars
-=======
-  
-
-</head>
-<body>
- <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer>
-</script>
-<script src="js/slidebars.min.js" type="text/javascript"></script>
-<script>
-singlePageNav({
-      filter: ':not(.external)',
-      speed: 1000,
-      currentClass: 'current',
-      easing: 'swing',
-      updateHash: false,
-      beforeStart: function() {
-      },
-      onComplete: function() {
-        $navigation.removeClass('active');
-      }
-  });
-
-  // Scrollreveal initialize
-
-  var config = {
-
-    easing: 'hustle',
-    reset:  false,
-    delay:  'onload',
-    opacity: .2,
-    vFactor: 0.2,
-    mobile: false
-  }
-
-  window.sr = new scrollReveal( config );
-
-  // Fancybox
-
-  $(".video-play").fancybox({
-    fitToView : true,
-    width   : '100%',
-    autoSize  : true,
-    closeClick  : false,
-    openEffect  : 'none',
-    closeEffect : 'none'
-  });
-  </script>
-<script>
-( function ( $ ) {
-  // Initialize Slidebars
-  var controller = new slidebars();
-  controller.init();
-   // Toggle Slidebars
->>>>>>> master
-        $( '.toggle-id-1' ).on( 'click', function ( event ) {
-          // Stop default action and bubbling
-          event.stopPropagation();
-          event.preventDefault();
-
-          // Toggle the Slidebar with id 'id-1'
-          controller.toggle( 'id-1' );
-        } );
-<<<<<<< HEAD
-
-      } ) ( jQuery );
-        </script>
+    
 <!-- Menu -->
- <div canvas="container">
+<nav canvas="">
+  <div canvas="container">
+    <div class="row">
+      <div class="twelve columns">
+          <span class="toggle-id-1"><i class="fa fa-bars"></i></span>
+      </div>
     </div>
-    <div off-canvas="id-1 left reveal">
-    <a href="#" class="menu-icon">
-    <i class="fa fa-bars"></i>
-  </a>
+  </div>
+</nav>
+  <div off-canvas="id-1 left shift">
+  <ul>
+    <li><a href="https://www.adchsm.com/slidebars/"><span class="fa fa-home"></span> Home</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/features/"><span class="fa fa-check-circle"></span> Features</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/downloads/"><span class="fa fa-cloud-download"></span> Downloads</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/#" class="js-toggle-demos-menu"><span class="fa fa-eye"></span> Demos</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/#" class="js-toggle-help-menu"><span class="fa fa-life-ring"></span> Help Center</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/compatibility/"><span class="fa fa-info-circle"></span> Compatibility</a></li>
+    <li><a href="https://github.com/adchsm/Slidebars" class="ga-external-github"><span class="fa fa-github"></span> Slidebars on GitHub</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/#" class="js-toggle-author-menu"><span class="fa fa-user"></span> About the Author</a></li>
+    <li><a href="https://www.adchsm.com/slidebars/#" class="js-close-any"><span class="fa fa-times-circle"></span> Close</a></li>
+  </ul>
 </div>
 <!-- <nav class="topnav">
-=======
-} ) ( jQuery );
-</script>
-<!-- Menu -->
-<!-- <div canvas="container">
-</div>
 
- <div off-canvas="id-1 left reveal">
->>>>>>> master
-
-
-<a href="#hero">Home</a></li>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#creativity">Creativity</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#help">Help</a></li>
-    <li><a href="#clients">Clients</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#video">Video</a></li>
-    <li><a href="#why-us">Why us?</a></li>
-    <li><a href="#quote">Quote</a></li>
-    <li><a href="#contact">Contact</a></li>
-    </div> -->
-
-<!-- <nav class="navbar">
-
-  <ul class="navbar">
-   
+  <ul class="topnav">
+ 
     <li>  <a href="#" class="menu-icon">
     <i class="fa fa-bars"></i>
-    </a>
-    
-  </div>
-    </li>
+  </a></li>
      <li><a href="#hero">Home</a></li>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#creativity">Creativity</a></li>
