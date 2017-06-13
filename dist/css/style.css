@@ -249,10 +249,49 @@ section {
   color: white;
 }
 
+/* line 1, ../sass/_canvas.scss */
+[canvas=container] {
+  margin-top: 60px;
+  height: -webkit-calc( 100% - 60px );
+  height: -moz-calc( 100% - 60px );
+  height: calc( 100% - 60px );
+}
+
+/* line 1, ../sass/_off-canvas.scss */
+[off-canvas] {
+  background-color: #222222;
+}
+/* line 4, ../sass/_off-canvas.scss */
+[off-canvas] .padded-box {
+  padding: 20px;
+}
+/* line 8, ../sass/_off-canvas.scss */
+[off-canvas] ul.menu {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+/* line 14, ../sass/_off-canvas.scss */
+[off-canvas] ul.menu li a {
+  color: rgba(255, 255, 255, 0.87);
+  display: block;
+  padding: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 200ms ease-in-out 0s;
+  transition: all 200ms ease-in-out 0s;
+}
+/* line 23, ../sass/_off-canvas.scss */
+[off-canvas] ul.menu li a:hover {
+  color: #ff3838;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 
 /* =Navigation
 -------- */
+/*
 ul.navbar {
     list-style-type: none;
     margin: 0;
@@ -354,7 +393,7 @@ li.menu {
 }
 
 
-
+*/
 
 
 

@@ -1,0 +1,67 @@
+	/* HOMEPAGE VIDEO */
+
+#home-video {
+	height: 971px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#big-video-wrap {
+	position: absolute !important;
+	top: 0 !important;
+}
+
+.home-video-overlay {
+	background: url(images/video-overlay.png) no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+	#home-video {
+		background: url(images/EscapeOrlando_TabletHome.jpg) no-repeat center center #000;
+		margin-top: -1px;
+		clear: both;
+		height: 500px;
+	}
+	.home-video-overlay {
+		background:none;
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+	#home-video {
+		background: url(images/EscapeOrlando_TabletHome.jpg) no-repeat center center #000;
+		margin-top: -1px;
+		clear: both;
+		height: 500px;
+	}
+	.home-video-overlay {
+		background:none;
+	}
+}
+
+@media all and (max-width: 768px) {
+	#home-video {
+		background: url(images/EscapeOrlando_MobileHome.jpg) no-repeat center center #000;
+		margin-top: -1px;
+		clear: both;
+		height: 300px;
+	}
+	.home-video-overlay {
+		background:none;
+	}
+}
+
+
+@media all and (max-width: 640px) {
+	#home-video {
+		height: 450px;
+	}
+}

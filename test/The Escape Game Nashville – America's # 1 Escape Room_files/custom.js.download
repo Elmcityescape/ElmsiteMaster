@@ -1,0 +1,104 @@
+var $ = jQuery.noConflict();
+
+$(function() { 
+	// Gravity Forms Field Clearing
+	$.fn.cleardefault = function() {
+		return this.focus(function() {
+			if( this.value == this.defaultValue ) {
+				this.value = "";
+			}
+		}).blur(function() {
+			if( !this.value.length ) {
+				this.value = this.defaultValue;
+			}
+		});
+	};
+	
+	$(".clearit input, .clearit textarea").cleardefault();
+	
+	if($('body').hasClass('home')) {
+		if(Modernizr.mq('(min-width: 1025px)')) {
+
+			// Sticky section
+			var window_height = $(window).height();
+			var sticky_section = $("#desc-short");
+		   	sticky_section.height(window_height - 68);
+			sticky_section.stick_in_parent({
+				offset_top: 68
+			});
+
+
+			// Home video
+			/*
+				var home_video = $('#home-video');
+			home_video.height(window_height);
+			var BV = new $.BigVideo({
+				useFlashForFirefox: false,
+				doLoop: true,
+				container: home_video,
+				shrinkable: false
+			});
+			BV.init();
+		    BV.show([
+		        { type: "video/mp4",  src: "http://devthe.me/escape1/wp-content/themes/escape1/videos/video.mp4" },
+		        { type: "video/webm", src: "vids/river.webm" },
+		        { type: "video/ogg",  src: "vids/river.ogv" }
+		    ], {
+		    	ambient: true
+		    });
+		    */
+
+    	}
+    	
+
+	    if(Modernizr.mq('(max-width: 1025px)')) {
+			var slider_wrapper = $('#desc-long-text').attr('id', 'desc-long-slider');
+			var slider = slider_wrapper.wrap('<div></div>');
+			var slides = slider.find('ul').addClass('slides');
+
+			slider.flexslider({
+				animation: 'slide',
+				smoothHeight: false,
+				slideshow: false,
+				directionNav: false
+			});
+		}
+	}
+
+
+	// When scrolling down make the menu stick to top
+	var escape1_menu = $('#site-navigation');
+	$(window).scroll(function () {
+		        if ($(this).scrollTop() > 100) {
+		            escape1_menu.addClass("scroll-menu");
+			    } else {
+		            escape1_menu.removeClass("scroll-menu");
+		        }
+		    });
+
+	if (Modernizr.touch) { 
+
+	} else { 
+    	//alert('No Touch Screen');
+	    $(".se-slope").hover(function(){
+	      	$(this).find(".se-overlay").fadeIn();
+	  	},
+	      function(){
+	      	$(this).find(".se-overlay").fadeOut();
+	        }
+	    );
+	}
+
+   
+   	$('.menu-toggle').on('click', function(){
+   		$('.main-navigation ul').addClass('fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+   			$(this).removeClass('fadeIn');
+   		});
+   	});
+   	/*$("li.games a").bind("click", function() {
+   		$('html, body').animate({
+    	scrollTop: ($('#games').offset().top + 132)
+		},500);
+   	}); */
+// End Document Ready	
+});
